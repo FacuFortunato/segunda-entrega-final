@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*estilos index*/
+
+/*body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: rgb(204, 209, 209);
+}
+
+/*header*/
+header{
+    margin: 10px;
+    padding: 20px;
+    background-color: #002B5B;
+    text-align: center;
+}
+
+/*animacion*/
+.sonic{
+    display: none;
+}
+
+
+/* color fuente*/
+h2, h3, h4, h5, li, p{
+    color: black;
+}
+
+/*footer*/
+footer{
+    margin:0 10px 0 10px;
+    padding-left: 25px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #002B5B; 
+    font-size: 15px;
+}
+footer div{
+    margin: 20px 0px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer div img{
+    margin-bottom: 0;
+    height: 20px;
+    width: 20px;
+}
+
+/*contenedor*/
+.contenedor{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "productos-1 productos-1"
+    "productos-2 productos-2"
+    "cajas cajas"
+    ;
+}
+
+.contenedor h3{
+margin: 100px auto;
+}
+
+/*productos*/
+.productos-1{
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-1;
+    padding: 10px;
+}
+.productos-1 div{
+    margin: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 2px 4px 6px;
+}
+.productos-1 div span{
+    margin: auto;
+}
+.productos-1 div button{
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.productos-1 div img{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;   
+}
+
+.productos-2{
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-2;  
+    padding: 10px; 
+}
+.productos-2 div{
+    margin: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 2px 4px 6px;
+}
+.productos-2 div span{
+    margin: auto;
+}
+.productos-2 div button{
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.productos-2 div img{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;   
+}
+
+/*banner*/
+aside{
+    display: none;
+} 
+
+/*cajas*/
+.cajas{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    height: 600px;
+    width: 250px;
+    display: grid;
+    grid-area: cajas;
+    grid-template-columns: 1fr;
+    background-color: rgba(255, 255, 255, 0.308);
+    border: 1px solid black;
+    
+}
+.cajas div{
+    margin: 15px;
+    padding-top: 15px;
+    border: 1px solid black;
+    align-content: center;
+    justify-content: center;
+}
+.cajas div img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    
+}
+/*none*/
+aside{
+    display: none;
+}
+
+
+/*estilos servicio.html*/
+main div .banner{
+    margin: 100px auto;
+}
+main div .banner img{
+    width: 70%;
+    height: 70%;
+}
+.main-servicio{
+    align-content: center;
+}
+.main-servicio div h2{
+    margin: 100px auto;
+}
+.info div{
+    margin: 50px auto;
+    background-color: #002B5B;
+    box-shadow: 2px 4px 6px;
+}
+.formulario{
+    margin: 100px auto;
+    border: 1px solid black;
+    box-shadow: 2px 4px 6px;
+}
+
+
+
+
+
+/*estilos media queries*/
+@media screen and (min-width:400px) {
+    
+    .contenedor{
+        grid-template-areas: 
+        "productos-1 productos-1"
+        "banner banner"
+        "productos-2 productos-2"
+        "cajas cajas"
+        ;
+     }
+
+
+    .productos-1{
+        grid-template-columns: 1fr 1fr;
+    }
+    .productos-2{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*aside*/
+    aside{
+        display: grid;
+        grid-area: banner;
+        width: 100%;
+    }
+    aside img{
+        height: 200px;
+        width: 500px;
+    } 
+    footer ul, div{
+        font-size: 20px;
+    }
+    .cajas{
+        height: 700px;
+        width: auto;
+    }
+
+    /*propiedades servicio.html*/
+    .info div{
+        height: 450px;
+        width: 75%;
+        padding: 10%;
+    }
+    .formulario{
+        width: 75%;
+    }
+}
+
+
+@media screen and (min-width:750px) {
+    /*estilos index*/
+    .productos-1{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .productos-2{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /*cajas*/
+    .cajas{
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 350px;
+        width: 600px;
+    }
+    /*aside*/
+    aside img{
+        height: 200px;
+        width: 700px;
+    } 
+    /*footer*/
+    footer{
+        width: 100%;
+        font-size: 20px;
+    }
+
+
+    /*estilos servicio*/
+    main div .banner img{
+        width: 50%;
+        height: 50%;
+    }
+    .info div{
+        width: 60%;
+    }
+    .formulario{
+        width: 50%;
+    }
+    
+
+
+    /*propiedades transform*/
+    main div div img{
+        transition: 2s;
+    }   
+    main div div img:hover{
+        transform: scale(1.2);
+    }
+    main div div button:hover{
+        transform: scale(0.9);
+    }
+    nav ul li:hover{
+        transform: scale(0.9);
+    }
+    main div div button:hover{
+        transform: scale(0.9);
+    }
+    header nav ul li:hover{
+        transform: scale(0.9);
+    }
+    .cajas div img{
+        transition: 2s;
+    }
+    .cajas div img:hover{
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .sonic{
+        display: inline;
+        margin: 100px;
+        height: 250px;
+        width: 250px;
+    }
+    .sonic img{
+        width: 50%;
+        height: 50%;
+    }
+    .escalar{
+        animation-name: escalar;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes escalar {
+        from{
+            transform: scale(0);
+        }
+
+        to{
+            transform: scale(0.8);
+        }
+    }
+}
+
+
+/*bootstrap*/
+#carouselExampleCaptions{
+    margin: 100px;
+}
+.info-1{
+    margin: 100px 10px;
+}
+.card-group{
+    margin: 100px 10px;
+}
+.img-footer img{
+    height: 20px;
+    width: 20px;
+}
